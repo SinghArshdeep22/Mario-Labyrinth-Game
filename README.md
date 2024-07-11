@@ -22,3 +22,6 @@ The maze game was developed in C++ using the Allegro library, an open-source gra
 
 ## Menu and User Interface:
 - The game includes an initial menu managed by the menu function, which allows the player to start a new game or exit the game.
+
+# Conclusion
+This maze game offers an immersive experience thanks to the integration of graphic and sound elements via the Allegro library. The implemented features make for an interesting adventure in which the player must navigate through the maze, collect all the coins and achieve victory.
