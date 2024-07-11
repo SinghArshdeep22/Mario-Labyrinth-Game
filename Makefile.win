@@ -1,0 +1,28 @@
+# Project: Progetto1
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = Labirinto.o
+LINKOBJ  = Labirinto.o
+LIBS     = -L"C:/Users/arshs/Dev-Cpp/MinGW64/lib" -L"C:/Users/arshs/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc -L"C:/Windows/allegro-mingw-gcc6.2.0-x64-static-5.2.2/allegro/lib" ../../../../../../../Windows/allegro-mingw-gcc6.2.0-x64-static-5.2.2/allegro/lib/liballegro_monolith.dll.a
+INCS     = -I"C:/Users/arshs/Dev-Cpp/MinGW64/include" -I"C:/Users/arshs/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Users/arshs/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Windows/allegro-mingw-gcc6.2.0-x64-static-5.2.2/allegro/include"
+CXXINCS  = -I"C:/Users/arshs/Dev-Cpp/MinGW64/include" -I"C:/Users/arshs/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Users/arshs/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Users/arshs/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++" -I"C:/Windows/allegro-mingw-gcc6.2.0-x64-static-5.2.2/allegro/include"
+BIN      = Labirinto.exe
+CXXFLAGS = $(CXXINCS) 
+CFLAGS   = $(INCS) 
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+Labirinto.o: Labirinto.cpp
+	$(CPP) -c Labirinto.cpp -o Labirinto.o $(CXXFLAGS)
